@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"> 
+    <xsd:element name="releve">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element type="xsd:short" name="Rib"></xsd:element>
+                <xsd:element type="xsd:date" name="datereleve"></xsd:element>
+                <xsd:element type="xsd:short" name="solde"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="operations">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="operation" maxOccurs="unbounded" type="OP"></xsd:element>
+                <xsd:element type="xsd:date" name="dateDebut"></xsd:element>
+                <xsd:element type="xsd:date" name="dateFin"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="OP">
+        <xsd:sequence>
+            <xsd:element name="Type" type="xsd:string"></xsd:element>
+            <xsd:element name="Date" type="xsd:date"></xsd:element>
+            <xsd:element name="Montant" type="xsd:short"></xsd:element>
+            <xsd:element name="Description" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+        </xsd:complexType>
+    
+</xsd:schema>
